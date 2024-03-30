@@ -73,4 +73,31 @@ footer{
     padding: 1.5rem;
     padding-bottom: 3rem;
 }
+
+h2 {
+    font-size: 2.125rem;
+    margin-bottom: 1rem;
+}
+
+h2 ~  p {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+form {
+    flex: 1 1 0%;
+    display: block;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0px -4px 12px 4px rgba(0, 0, 0, 0.16);
+    color: var(--dark);
+    padding: 4rem 1.5rem;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
 </style>
