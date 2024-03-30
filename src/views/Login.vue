@@ -70,6 +70,7 @@ footer{
     background-color: #fff;
     width: 100%;
     color: var(--dark);
+    text-align: center;
     padding: 1.5rem;
     padding-bottom: 3rem;
 }
@@ -100,4 +101,45 @@ label {
     margin-bottom: 1.5rem;
 }
 
+label span {
+    display: block;
+    color: var(--gray);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+input:not([type="submit"]){
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+input:not([type="submit"])::placeholder{
+    color: var(--gray);
+    font-style: italic;
+}
+
+input[type="submit"]{
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--primary);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+input[type="submit"]:hover{
+    background-color: var(--primary-dark);
+}
 </style>

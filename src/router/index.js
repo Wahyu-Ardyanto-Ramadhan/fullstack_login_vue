@@ -26,6 +26,7 @@ const router = createRouter({
   routes
 })
 
+
 router.beforeEach(async (to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)){
     //Authentication check
