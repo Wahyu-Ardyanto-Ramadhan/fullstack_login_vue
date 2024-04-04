@@ -1,7 +1,7 @@
 <template>
     <main>
         <h1>Hello World!</h1>
-        <button type="">Logout</button>
+        <button>Logout</button>
     </main>
 </template>
 
