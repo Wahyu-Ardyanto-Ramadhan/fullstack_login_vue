@@ -9,11 +9,11 @@ const password = ref('')
 const conf_password = ref('')
 
 const Register = async () => {
-    if (!email || !password || !conf_password){
+    if (!email.value || !password.value || !conf_password.value){
         return alert('Please fill in all fields')
     }
 
-    if (password !== conf_password){
+    if (password.value !== conf_password.value){
         return alert('Password do not match')
     }
 
@@ -27,6 +27,13 @@ const Register = async () => {
             password: password.value
         })
     }).then(res => res.json())
+
+    if (res.success){
+        localStorage.setItem('token', res.token)
+        router.push('/')
+    }else{
+        alert(res.message)
+    }
 }
 
 </script>
@@ -41,7 +48,7 @@ const Register = async () => {
             <p>Login or create an account to start using the super secret app</p>
         </header>
 
-        <form @submit.prevent="">
+        <form @submit.prevent="Register">
 
             <label>
                 <span>Enter your email</span>
